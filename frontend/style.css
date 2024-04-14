@@ -80,12 +80,14 @@ form {
     opacity: 0.8;
 }
 
-.search-result a{
-    font-size: 20px;
+.photo-info {
+    /* font-size: 20px; 
+    
     text-decoration: none;
-    color: #333;
     display: block;
-    padding: 10px;
+    */
+    padding: 1rem;
+    color: #333;
     text-transform: capitalize;
 }
 
@@ -101,16 +103,29 @@ form {
     cursor: pointer;
     border-radius: 5px;
 }
-    ;
+
+.pagination {
+    text-align: center;
+}
+
+.pagination a {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 0 5px;
+    
+}
+   
 @media screen and (max-width: 768px) {
     .search-results {
         padding: 20px;
-        
-    }
+            }
      
     .search-result {
-        
-        width: 45%;
+                width: 45%;
     }   
 }
 @media screen and (max-width: 480px) {
