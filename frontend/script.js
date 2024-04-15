@@ -47,6 +47,9 @@ const searchImages = async () => {
 
 formEl.addEventListener("submit", (event) => {
   event.preventDefault();
+
+  //show the search results container
+  searchResults.classList.remove("hidden");
   page = 1;
   searchImages();
 });

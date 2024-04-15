@@ -57,6 +57,7 @@ form {
     margin: 0 auto;
     max-width: 1200px;
     padding: 20px;
+    /* display: none; */
 }
 
 .search-result {
@@ -67,9 +68,14 @@ form {
     margin-bottom: 40px;
     overflow: hidden;
     position: relative;
-    
-    
+   
 }
+    
+.hidden {
+    display: none;
+  }
+    
+
 
 .search-result img {
     width: 100%;
