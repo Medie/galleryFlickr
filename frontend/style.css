@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
 * {
@@ -39,7 +39,7 @@ form {
     color: #333;
 }
 
-#search-button {
+#search-btn {
     padding: 10px 20px;
     background-color: #138065;
     color: #fff;
@@ -56,6 +56,7 @@ form {
     justify-content: space-between;
     margin: 0 auto;
     max-width: 1200px;
+    padding: 20px;
 }
 
 .search-result {
@@ -67,42 +68,55 @@ form {
     overflow: hidden;
     position: relative;
     
+    
 }
 
 .search-result img {
     width: 100%;
-    height: 100%;
+    height: 100%; 
     object-fit: cover;
-    transition:  opacity 0.2s ease in-out;
+    transition:  transform 0.3s ease in-out;
 }
 
 .search-result:hover img {
     opacity: 0.8;
 }
 
-.photo-info {
-    /* font-size: 20px; 
-    
+.search-result a{
+    font-size: 20px;
     text-decoration: none;
-    display: block;
-    */
-    padding: 1rem;
     color: #333;
-    text-transform: capitalize;
+    display: block;
+    padding: 10px;
+    text-transform: capitalize; 
+    transition: color 0.3s ease-in-out;
 }
 
-#show-more-button {
+.search-result:hover a {
+    color:  rgba(4, 28, 235, 0.8);
+
+
+}
+
+#show-more-btn {
     display: block;
-    margin: 30px auto;
+    margin: 20px auto;
     padding: 10px 20px;
     background-color: #008cba;
     color: #fff;
     border: none;
     font-size: 18px;
     border-radius: 5px;
+    text-align: center;
     cursor: pointer;
-    border-radius: 5px;
+    transition: background-color 0.2s ease-in-out;
+    display: none
 }
+
+#show-more-btn:hover {
+    background-color: #0077b2;
+}
+
 
 .pagination {
     text-align: center;
@@ -125,7 +139,7 @@ form {
             }
      
     .search-result {
-                width: 45%;
+        width: 45%;
     }   
 }
 @media screen and (max-width: 480px) {
@@ -134,5 +148,17 @@ form {
         padding: auto;
         margin-left: 10px;
     }   
+    form {
+        flex-direction: column;
+
+    }
+    #search-input {
+        width: 85%;
+        margin-bottom: 20px;
+    }
+    #search-btn {
+        width: 85%;
+        font-size: 18px;
+    }
 }
 

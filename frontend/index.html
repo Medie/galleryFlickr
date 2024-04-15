@@ -1,46 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
     <h1>Photo Gallery App</h1>
-    <form action =""> 
-    <input type="text" id="search-input" placeholder="Search for images">
-        <button id = "search-button">Search</button>
+    <form action="">
+      <input type="text" id="search-input" placeholder="Search for images" />
+      <button id="search-btn">Search</button>
     </form>
 
-    <div class="search-results">
-        <div class="search-result">
-            <img src="https://live.staticflickr.com/3914/39554529485_271b88d8ed_b.jpg"
-            alt="At the desert">
-            <div class=" photo-info">
-                <h3>photo title</h3>
-            </div>
-    
+  <div class="search-results">
+      <div class="search-result">
+        <img
+          src="https://live.staticflickr.com/4614/39554529485_271b88d8ed_b.jpg"
+          alt="At the desert"
+        </img>
+        <a>At the desert</a>
+      </div>
+      <div class="search-result">
+        <img
+          src="https://live.staticflickr.com/4614/39554529485_271b88d8ed_b.jpg"
+          alt="At the desert"
+        </img>
+        <a>At the desert</a>
+      </div>
+      <div class="search-result">
+        <img
+          src="https://live.staticflickr.com/4614/39554529485_271b88d8ed_b.jpg"
+          alt="At the desert"
+        </img>
+        <a>At the desert</a>
+      </div>
+    </div> 
 
-            
-    </div>
-
-    <!-- <button id="show-more-button">Load More</button> -->
     <div class="pagination">
-        <a href="">&laquo;</a>
-        <a href="">1</a>
-        <a href="">2</a>
-        <a href="">3</a>
-        <a href="">4</a>
-        <a href="">5</a>
-        <a href="">&raquo;</a>
-
+         <button id="show-more-btn">Show more images </button>
+   
     </div>
-
-    
-    
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
