@@ -12,8 +12,14 @@ let perPage = 10;
 const APIURL = "http://localhost:3000/search/car?page=1&perPage=13";
 
 const main = document.querySelector('main');
+const form = document.querySelector('form');
+const search = document.getElementById('search');
+
+
+getImages();
 
 async function getImages() {
+  const APIURL = `http://localhost:3000/search/${inputData}?page=${page}&perPage=${perPage}`;
   const response = await fetch(APIURL);
   const respData = await response.json();
 
@@ -44,7 +50,15 @@ async function getImages() {
   return respData;
 }
 
-getImages();
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  main.innerHTML = "";
+  getImages();
+ 
+
+
+});
+
 
 /* const searchImages = async () => {
   inputData = searchInputEl.value;

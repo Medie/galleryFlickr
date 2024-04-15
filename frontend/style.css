@@ -14,8 +14,45 @@ body {
 main {
     display: flex;
     flex-wrap: wrap;
- 
+ }
+
+ header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #373b69;
+    color: #fff;
+    padding: 1rem;
+ }
+
+ header h1 {
+    margin: 0;
+ }
+
+.search {
+    padding: 0.5rem;
+    border: 2px solid  #373b69;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0,5rem
+    
 }
+
+.search::placeholder {
+    color: #181a30;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+}
+
+.search:focus {
+    outline: none;
+    border-color: #fff;
+    color: #181a30;
+    font-weight: 400;
+ }
+ 
 
 .image {
     border-radius: 3px;
