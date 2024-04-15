@@ -9,7 +9,44 @@ let inputData = "";
 let page = 1;
 let perPage = 10;
 
-const searchImages = async () => {
+const APIURL = "http://localhost:3000/search/car?page=1&perPage=13";
+
+const main = document.querySelector('main');
+
+async function getImages() {
+  const response = await fetch(APIURL);
+  const respData = await response.json();
+
+  console.log("respData", respData);
+
+  respData.forEach((photo) => {
+    // console.log("photo", photo);
+    const { imageUrl, title } = photo;
+    console.log("imageUrl", imageUrl);
+    console.log("title", title);
+
+    const imageEl = document.createElement("div");
+    imageEl.classList.add("image");
+
+    imageEl.innerHTML = `
+                <img
+                    src="${imageUrl}"
+                    alt="${title}"
+                />
+                <div class="image-info">
+                    <a>${title}</a>
+                </div>
+            `;
+    main.appendChild(imageEl);
+
+  });
+
+  return respData;
+}
+
+getImages();
+
+/* const searchImages = async () => {
   inputData = searchInputEl.value;
   const url = `http://localhost:3000/search/${inputData}?page=${page}&perPage=${perPage}`;
 
@@ -53,6 +90,7 @@ formEl.addEventListener("submit", (event) => {
   page = 1;
   searchImages();
 });
+
 showMore.addEventListener("click", () => {
   searchImages();
-});
+}); */
