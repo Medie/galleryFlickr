@@ -2,24 +2,16 @@ import axios from 'axios';
 import dotenv from 'dotenv';
 dotenv.config();
 
-
-
 const FLICKR_API_KEY = process.env.FLICKR_API_KEY 
 const FLICKR_URL = process.env.FLICKR_URL || 'https://www.flickr.com/services/rest/';
 const method = 'flickr.photos.search';
 
-
-
-// Add pagination here
 export interface SearchGalleryParams {
     searchTerm: string;
-    page: number;
-    perPage: number;
-    //method: string;
+    page: number; // page number
+    perPage: number; // number of photos per page
+    
 }
-
-
-
 
 export async function searchGallery ({ searchTerm,  page, perPage }: SearchGalleryParams) {
 

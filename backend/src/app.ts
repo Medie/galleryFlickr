@@ -2,8 +2,6 @@ import express from 'express';
 import searchRouter from './routers/searchRoute';
 import cors from 'cors';
 
-
-
 async function  main() {
 
     try {
@@ -14,18 +12,11 @@ async function  main() {
         app.use (express.json()); // for parsing application/json   
         app.use (express.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
-        
-        
         app.use (searchRouter);
-
 
         app.listen (port, async () => {
             console.log(`Server running on port ${port}`);
         })
-
-
-
-
     }
     catch (err) {
         console.error('Error starting server', err);
