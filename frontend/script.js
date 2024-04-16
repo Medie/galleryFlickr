@@ -1,29 +1,29 @@
-const formEl = document.querySelector("form");
+
 const searchInputEl = document.getElementById("search-input");
-/*
-Here i am using a className instead of an ID so a  dot is needed before the class name */
-const searchResults = document.querySelector(".search-results");
 const showMore = document.getElementById("show-more-btn");
+const main = document.querySelector('main');
+const form = document.querySelector('.form');
+const search = document.getElementById('search');
 
 let inputData = "";
 let page = 1;
 let perPage = 10;
 
-const APIURL = "http://localhost:3000/search/car?page=1&perPage=13";
-
-const main = document.querySelector('main');
-const form = document.querySelector('form');
-const search = document.getElementById('search');
-
-
-getImages();
 
 async function getImages() {
+  inputData = searchInputEl.value;
   const APIURL = `http://localhost:3000/search/${inputData}?page=${page}&perPage=${perPage}`;
+
   const response = await fetch(APIURL);
   const respData = await response.json();
 
   console.log("respData", respData);
+  if (page === 1) {
+    main.innerHTML = "";
+    showMore.style.display = "none";
+
+  }
+
 
   respData.forEach((photo) => {
     // console.log("photo", photo);
@@ -47,16 +47,22 @@ async function getImages() {
 
   });
 
-  return respData;
+  page++;
+  if (page > 1) {
+    showMore.style.display = "block";
+  }
+
 }
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  main.innerHTML = "";
+  inputData = searchInputEl.value;
+  page = 1;
   getImages();
- 
+});
 
-
+showMore.addEventListener("click", () => {
+  getImages();
 });
 
 
