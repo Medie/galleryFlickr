@@ -2,7 +2,7 @@
 
 ## Description
 
-This application fetches images from an API and displays them on a webpage. Users can load more images by clicking a "Show More" button.
+This application fetches images from an API and displays them on a webpage. Users can load more images by clicking a "Show More" button. The backend of this application is a Node.js server built with Express.js. It serves the API that the frontend uses to fetch images.
 
 ## Installation
 
@@ -12,11 +12,17 @@ To install the application, follow these steps:
 ```sh
 git clone <repository-url>
 
+2. Install the backend dependencies:
+
+cd ../backend
 npm install
-open index.html
 
 Running the Application
-To run the application, simply open the index.html file in your browser.
+To run the application, you need to start the backend server and then open the frontend in your browser.
+
+Start the backend server:
+cd backend
+npm start
 
 Usage
 The application fetches images from an API and displays them on the page. When the page is first loaded, it fetches a set of images and displays them. The user can load more images by clicking the "Show More" button.
@@ -25,7 +31,6 @@ The getImages function (lines 44-68 in script.js) is responsible for fetching th
 
 The form's submit event and the "Show More" button's click event both trigger the getImages function. When the form is submitted, it resets the page number to 1 and fetches the first set of images. When the "Show More" button is clicked, it fetches the next set of images.
 
+The backend server provides an API endpoint at /api/images that returns a list of images. The frontend fetches data from this endpoint to display images on the webpage.
 
-
-
-
+## End
