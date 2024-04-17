@@ -29,7 +29,7 @@ async function getImages() {
 
     console.log("respData", respData);
     if (page === 1) {
-      main.innerHTML = " ";
+      main.innerHTML = "";
       showMore.style.display = "none";
     }
 
@@ -61,7 +61,7 @@ async function getImages() {
       // make a delay of 3 seconds to show moreMore button
       setTimeout(() => {
         showMore.style.display = "block";
-      }, 5000);
+      }, 1000);
     }
 
   } catch (error) {
