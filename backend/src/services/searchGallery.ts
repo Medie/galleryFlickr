@@ -13,6 +13,8 @@ export interface SearchGalleryParams {
     
 }
 
+
+
 export async function searchGallery ({ searchTerm,  page, perPage }: SearchGalleryParams) {
 
  const url = `${FLICKR_URL}?method=${method}&api_key=${FLICKR_API_KEY}&text=${searchTerm}&per_page=${perPage}&page=${page}&format=json&nojsoncallback=1`;
