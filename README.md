@@ -104,7 +104,7 @@ const PORT = 3000;
 ### To run the the Frontend
 ```sh
 Open the frontend folder
-Right click the the index.html and choose what browser to run the file. 
+Right click the index.html and choose what browser to run the file. 
 ```
 ### Overview of what `scripts.js`does: 
 Here is a function that creates an image element from a given photo object.
