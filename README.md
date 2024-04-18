@@ -90,7 +90,7 @@ export async function searchService ({ searchTerm,  page, perPage }: ISearchPara
 The application fetches images from an API and displays them on the page. 
 
 ### Script Usage
-The `script.js` file contains the main logic for displaying the images
+The `script.js` file contains the main logic for displaying the images.
 
 ### Configuring the Port
 
