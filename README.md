@@ -12,8 +12,8 @@ You will need to go through the Flickrs process to get yourself an API key for y
 
 To install the application, follow these steps:
 ```sh
-1. Unzip the project
-2. Create a .env file in the backend folder of the project
+1. Unzip the project.
+2. Create a .env file in the backend folder of the project.
 ```
 Declare variables in the .env file
 ```sh
