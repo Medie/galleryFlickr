@@ -85,8 +85,24 @@ export async function searchService ({ searchTerm,  page, perPage }: ISearchPara
 }
 ```
 
-### WEB
+## WEB
+
 The application fetches images from an API and displays them on the page. 
+
+### Script Usage
+The `script.js` file contains the main logic for our application.
+
+### Configuring the Port
+
+The script file uses a specific port to communicate with the backend. If your backend is running on a different port, you'll need to update the script file to match.
+
+1. Open the `script.js` file in your text editor.
+2. Locate the line where the `PORT` is defined and change it accordingly:
+
+```javascript
+const PORT = 3000;
+```
+
 Here is a function that creates an image element from a given photo object.
 ```js
 function createImageElement(photo) {
