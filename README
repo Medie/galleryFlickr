@@ -1,7 +1,10 @@
 # Gallery App
+
 This application fetches images from Flickr API and displays them on a webpage. Users can load more images by clicking a "Show More" button. The backend of this application is a Node.js server built with Express.js. It serves the API that the frontend uses to fetch images.
 # Prerequisites
+
 ##### Flickr
+
 You will need to go through Flickrs process to get yourself an API-key for your application
 
 ## Installation
@@ -19,6 +22,7 @@ cd ../backend
 npm install
 ```
 ## Running the Application
+
 To run the application, you need to start the backend server and then open the frontend in your browser.
 ```sh
 Start the backend server:
@@ -27,6 +31,7 @@ npm run dev
 ```
 
 # Usage
+
 ### Search Service
 
 This function takes an array of Photo objects and returns an array of objects containing the imageURL and title of a photo.
