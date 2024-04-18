@@ -14,11 +14,14 @@ To install the application, follow these steps:
 ```sh
 1. Unzip the project
 2. Create a .env file in the root of your project
-
+```
+Declare your variables in the .env file
+```sh
 FLICKR_API_KEY="YOUR_FLICKR_KEY"  
 FLICKER_URL="https://www.flickr.com/services/rest/."
-
-3. Install the backend dependencies:
+```
+Install the backend dependencies:
+```sh
 cd ../backend
 npm install
 ```
