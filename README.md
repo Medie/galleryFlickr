@@ -15,7 +15,7 @@ To install the application, follow these steps:
 1. Unzip the project
 2. Create a .env file in the root of your project
 ```
-Declare your variables in the .env file
+Declare variables in the .env file
 ```sh
 FLICKR_API_KEY="YOUR_FLICKR_KEY"  
 FLICKER_URL="https://www.flickr.com/services/rest/."
