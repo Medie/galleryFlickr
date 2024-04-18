@@ -6,6 +6,9 @@ const form = document.querySelector('form');
 const perPage = 10;
 let page = 1;
 
+
+// It creates an image element from a given photo object and returns it.
+
 function createImageElement(photo) {
   const { imageUrl, title } = photo;
 
@@ -59,6 +62,7 @@ async function getImages() {
   }
 }
 
+//
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   page = 1;
