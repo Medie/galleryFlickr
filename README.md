@@ -13,12 +13,13 @@ You will need to go through the Flickrs process to get yourself an API key for y
 To install the application, follow these steps:
 ```sh
 1. Unzip the project
-2. Create a .env file in the root of your project
+2. Create a .env file in the backend folder of the project
 ```
 Declare variables in the .env file
 ```sh
 FLICKR_API_KEY="YOUR_FLICKR_KEY"  
 FLICKER_URL="https://www.flickr.com/services/rest/."
+NODE_PORT=3000
 ```
 Install the backend dependencies:
 ```sh

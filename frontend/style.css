@@ -15,6 +15,8 @@ body {
 main {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav-container {
@@ -32,7 +34,6 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-   /*  align-items: center; */
     width: 100%;
 }
 
@@ -81,8 +82,6 @@ header {
     align-items: center;
     justify-content: center;
     align-self: center;
-
-
 }
 
 .search:focus {
@@ -99,7 +98,6 @@ header {
     margin: 2rem;
     width: 400px;
     overflow: hidden;
-
 }
 
 .image img {
@@ -199,12 +197,6 @@ form {
 }
 
   }
-@media (max-width: 959px) {
-    
-    main{
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-    
-  }
+
+
+
