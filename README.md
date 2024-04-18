@@ -130,10 +130,15 @@ async function getImages() {
   }
 
   try {
-    const APIURL = `http://localhost:3000/search/${inputData}?page=${page}&perPage=${perPage}`;
+    const APIURL = `${API_BASE_URL}${PORT}/search/${inputData}?page=${page}&perPage=${perPage}`;
 
     const response = await fetch(APIURL);
     const respData = await response.json();
+
+    if (respData.length === 0) {
+      main.innerHTML = "<div class='unresponsive'> network error please contact support</div>";
+      return;
+    }
 
     if (page === 1) {
       main.innerHTML = "";
@@ -155,7 +160,7 @@ async function getImages() {
 
   } catch (error) {
     console.log("error", error);
-    main.innerHTML = "<div class='unresponsive'> Something went wrong please try  again</div>";
+    main.innerHTML = "<div class='unresponsive'>  network error please contact support</div>";
   }
 }
 ```
