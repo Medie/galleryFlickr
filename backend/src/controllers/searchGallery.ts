@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import { searchGallery } from '../services/searchGallery';
+import { searchService } from '../services/searchService';
 
 
 export  const  searchController = async (req: Request, res: Response, next: NextFunction) =>{
@@ -14,7 +14,7 @@ export  const  searchController = async (req: Request, res: Response, next: Next
 
     try {
        
-        const result = await searchGallery({ searchTerm,  page: Number(page),  perPage: Number(perPage) });
+        const result = await searchService({ searchTerm,  page: Number(page),  perPage: Number(perPage) });
         res.send(result);
     }
     catch (err) {
