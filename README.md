@@ -29,12 +29,11 @@ npm install
 ## Running the Application
 
 To run the application, you need to start the backend server and then open the frontend in your browser.
+### To run the the backend 
 ```sh
-Start the backend server:
 cd backend
 npm run dev
 ```
-
 # Usage
 
 ### Search Service
@@ -102,7 +101,12 @@ The script file uses a specific port to communicate with the backend. If your ba
 ```javascript
 const PORT = 3000;
 ```
-
+### To run the the Frontend
+```sh
+Open the frontend folder
+Right click the the index.html and choose what browser to run the file. 
+```
+## Overview of what `scripts.js`does: 
 Here is a function that creates an image element from a given photo object.
 ```js
 function createImageElement(photo) {
@@ -164,10 +168,19 @@ async function getImages() {
   }
 }
 ```
-The user can load more images by clicking the "Show More" button.
+Loads more images on "Show More" button click
 ```js
 showMore.addEventListener("click", getImages);
 ```
+On form submission, resets page to 1 and fetches images
+```js
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  page = 1;
+  getImages();
+});
+```
+
 
 ## Contributing
 

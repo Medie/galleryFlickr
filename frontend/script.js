@@ -70,7 +70,6 @@ async function getImages() {
   }
 }
 
-//
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   page = 1;
