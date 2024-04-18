@@ -6,7 +6,7 @@ This application fetches images from Flickr API and displays them on a webpage. 
 ### Flickr
 
 You will need to go through the Flickrs process to get yourself an API key for your application
-[flickr](https://www.flickr.com/)
+[https://www.flickr.com/](https://www.flickr.com/)
 
 ## Installation
 
