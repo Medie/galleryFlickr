@@ -18,7 +18,7 @@ To install the application, follow these steps:
 Declare variables in the .env file
 ```sh
 FLICKR_API_KEY="YOUR_FLICKR_KEY"  
-FLICKER_URL="https://www.flickr.com/services/rest/."
+FLICKR_URL="https://www.flickr.com/services/rest/."
 NODE_PORT=3000
 ```
 Install the backend dependencies:

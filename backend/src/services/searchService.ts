@@ -51,6 +51,7 @@ export async function searchService ({ searchTerm,  page, perPage }: ISearchPara
 
     } catch (error) {
         
+        // check what error is being thrown
         console.error('Error fetching photos:', error);
         return [];
     }

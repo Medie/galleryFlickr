@@ -4,7 +4,8 @@
   "description": "Photo gallery for Flickr",
   "main": "src/app.ts",
   "scripts": {
-    "dev": " nodemon src/app.ts"
+    "dev": " nodemon src/app.ts",
+    "start": "ts-node src/app.ts"
   },
   "author": "",
   "license": "ISC",
